@@ -44,6 +44,21 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: [true, "Enter your year"],
   },
+  events: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "Event",
+    },
+  ],
+});
+
+userSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: "events",
+    select: "-__v",
+  });
+
+  next();
 });
 
 userSchema.pre("save", async function (next) {

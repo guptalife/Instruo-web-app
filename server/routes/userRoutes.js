@@ -13,7 +13,7 @@ router.post("/logout", authController.protect, authController.logout);
 // Protect all routes after this middleware
 router.use(authController.protect);
 
-// user actions here, eg: update details, delete account, etc
+// user actions here, eg: event registration, update details, delete account, etc
 
 // Restrict all routes after this middleware to only Admins
 router.use(authController.restrictTo("admin"));
