@@ -10,6 +10,7 @@ const workshopSchema = new mongoose.Schema({
     type: String,
     unique: true,
   },
+  subtitle: String,
   category: {
     type: String,
     required: true,
@@ -27,11 +28,27 @@ const workshopSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  poc: [
+  schedule: [
+    {
+      title: String,
+      date: Date,
+      time: String,
+      duration: String,
+      venue: String,
+    },
+  ],
+  contacts: [
     {
       name: String,
       phone: String,
       email: String,
+    },
+  ],
+  rules: [String],
+  faq: [
+    {
+      question: String,
+      answer: String,
     },
   ],
   speakers: [
@@ -41,7 +58,7 @@ const workshopSchema = new mongoose.Schema({
       about: String,
       contact: {
         twitter: String,
-        facebook: String,
+        email: String,
         linkedin: String,
       },
     },

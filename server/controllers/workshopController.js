@@ -19,3 +19,18 @@ exports.getAllWorkshops = asyncHandler(async (req, res, next) => {
     workshops,
   });
 });
+
+exports.getWorkshopById = asyncHandler(async (req, res, next) => {
+  const workshop = await Workshop.findOne({ workshopId: req.params.id });
+
+  if (!workshop) {
+    return next(new AppError("Workshop Does Not Exist", 404));
+  }
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      workshop,
+    },
+  });
+});
