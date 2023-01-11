@@ -1,100 +1,110 @@
 import React from "react"
 
-const About = () => {
+const About = ({ aboutRef }) => {
 	return (
-		<div className="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full">
+		<div
+			className="hero bg-base-100 text-base-content mx-auto min-h-screen max-w-md md:max-w-full"
+			ref={aboutRef}>
 			<div className="hero-content px-4 md:px-2 text-center">
-				<div>
+				<div className="flex flex-col gap-16 mt-16">
 					<h2
-						className="mt-32 mb-32 text-5xl font-extrabold md:text-6xl"
+						className="text-5xl font-extrabold md:text-6xl"
 						id="about">
 						About Us
 					</h2>
-					<div className="card card-side bg-base-100 shadow-xl">
-						<figure className="w-1/3 ">
+					<div className="card card-side bg-base-100 shadow-xl hover:scale-105">
+						<figure className="w-1/3">
 							<img
-								src="https://images.pexels.com/photos/13268789/pexels-photo-13268789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+								src="https://images.pexels.com/photos/13268789/pexels-photo-13268789.jpeg"
 								alt="Movie"
 							/>
 						</figure>
-						<div className="card-body">
+						<div className="card-body w-2/3">
 							<h2 className="card-title">
 								New movie is released!
 							</h2>
-							<p>Click the button to watch on Jetflix app.</p>
-							{/* <div className="card-actions justify-end">
-								<button className="btn btn-primary">
-									Watch
-								</button>
-							</div> */}
-						</div>
-					</div>
-					<div className="mt-10 mb-20 flex flex-col lg:flex-row justify-evenly">
-						<img
-							src="https://images.pexels.com/photos/13268789/pexels-photo-13268789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-							className="max-w-sm rounded-lg shadow-2xl"
-						/>
-						<div className="flex lg:w-1/2 flex-col text-left">
-							<p className="py-8">
-								Provident cupiditate voluptatem et in. Quaerat
-								fugiat ut assumenda excepturi exercitationem
-								quasi. In deleniti eaque aut repudiandae et a id
-								nisi. Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Voluptate, ratione vitae!
-								Repellendus voluptate eaque nesciunt cum, eius
-								omnis ea, aut aspernatur voluptates dolores
-								illo? Eum nemo debitis minima. Impedit, fuga.
-								Aut, doloremque reprehenderit itaque fuga modi
-								voluptas eos quam ut ipsum magnam magni
-								molestias quaerat quia nisi veritatis nam
-								aliquam error qui quis amet maiores odit
-								cupiditate doloribus! Maxime, recusandae.
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Accusantium, eligendi eum
+								aliquam inventore sequi magnam iusto libero
+								unde, neque ipsa dolores ea omnis totam pariatur
+								natus! Quas ratione expedita saepe tenetur in
+								vitae esse aliquam, totam minima veritatis,
+								quisquam quo commodi omnis iure tempore
+								obcaecati alias explicabo quod! Aliquid nesciunt
+								harum dolor alias ipsum adipisci nihil corporis
+								placeat corrupti, qui accusamus porro temporibus
+								aut. Dignissimos beatae quos facilis quae ab et
+								cum dolore? Quasi corrupti veritatis quia
+								incidunt! Dolor similique iste itaque quod
+								maiores mollitia vel voluptas, temporibus,
+								ratione provident aliquam maxime. Reprehenderit
+								dolores voluptates quasi deserunt omnis ut
+								exercitationem.
 							</p>
 						</div>
 					</div>
-					<div className="mt-10 mb-20 flex flex-col lg:flex-row-reverse justify-evenly">
-						<img
-							src="https://images.pexels.com/photos/13268789/pexels-photo-13268789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-							className="max-w-sm rounded-lg shadow-2xl"
-						/>
-						<div className="flex lg:w-1/2 flex-col text-left">
-							<p className="py-8">
-								Provident cupiditate voluptatem et in. Quaerat
-								fugiat ut assumenda excepturi exercitationem
-								quasi. In deleniti eaque aut repudiandae et a id
-								nisi. Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Voluptate, ratione vitae!
-								Repellendus voluptate eaque nesciunt cum, eius
-								omnis ea, aut aspernatur voluptates dolores
-								illo? Eum nemo debitis minima. Impedit, fuga.
-								Aut, doloremque reprehenderit itaque fuga modi
-								voluptas eos quam ut ipsum magnam magni
-								molestias quaerat quia nisi veritatis nam
-								aliquam error qui quis amet maiores odit
-								cupiditate doloribus! Maxime, recusandae.
+					<div className="card card-side bg-base-100 shadow-xl">
+						<figure className="w-1/3">
+							<img
+								src="https://images.pexels.com/photos/13268789/pexels-photo-13268789.jpeg"
+								alt="Movie"
+							/>
+						</figure>
+						<div className="card-body w-2/3">
+							<h2 className="card-title">
+								New movie is released!
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Accusantium, eligendi eum
+								aliquam inventore sequi magnam iusto libero
+								unde, neque ipsa dolores ea omnis totam pariatur
+								natus! Quas ratione expedita saepe tenetur in
+								vitae esse aliquam, totam minima veritatis,
+								quisquam quo commodi omnis iure tempore
+								obcaecati alias explicabo quod! Aliquid nesciunt
+								harum dolor alias ipsum adipisci nihil corporis
+								placeat corrupti, qui accusamus porro temporibus
+								aut. Dignissimos beatae quos facilis quae ab et
+								cum dolore? Quasi corrupti veritatis quia
+								incidunt! Dolor similique iste itaque quod
+								maiores mollitia vel voluptas, temporibus,
+								ratione provident aliquam maxime. Reprehenderit
+								dolores voluptates quasi deserunt omnis ut
+								exercitationem.
 							</p>
 						</div>
 					</div>
-					<div className="mt-10 mb-20 flex flex-col lg:flex-row justify-evenly">
-						<img
-							src="https://images.pexels.com/photos/13268789/pexels-photo-13268789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-							className="max-w-sm rounded-lg shadow-2xl"
-						/>
-						<div className="flex lg:w-1/2 flex-col text-left">
-							<p className="py-8">
-								Provident cupiditate voluptatem et in. Quaerat
-								fugiat ut assumenda excepturi exercitationem
-								quasi. In deleniti eaque aut repudiandae et a id
-								nisi. Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Voluptate, ratione vitae!
-								Repellendus voluptate eaque nesciunt cum, eius
-								omnis ea, aut aspernatur voluptates dolores
-								illo? Eum nemo debitis minima. Impedit, fuga.
-								Aut, doloremque reprehenderit itaque fuga modi
-								voluptas eos quam ut ipsum magnam magni
-								molestias quaerat quia nisi veritatis nam
-								aliquam error qui quis amet maiores odit
-								cupiditate doloribus! Maxime, recusandae.
+					<div className="card card-side bg-base-100 shadow-xl">
+						<figure className="w-1/3">
+							<img
+								src="https://images.pexels.com/photos/13268789/pexels-photo-13268789.jpeg"
+								alt="Movie"
+							/>
+						</figure>
+						<div className="card-body w-2/3">
+							<h2 className="card-title">
+								New movie is released!
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Accusantium, eligendi eum
+								aliquam inventore sequi magnam iusto libero
+								unde, neque ipsa dolores ea omnis totam pariatur
+								natus! Quas ratione expedita saepe tenetur in
+								vitae esse aliquam, totam minima veritatis,
+								quisquam quo commodi omnis iure tempore
+								obcaecati alias explicabo quod! Aliquid nesciunt
+								harum dolor alias ipsum adipisci nihil corporis
+								placeat corrupti, qui accusamus porro temporibus
+								aut. Dignissimos beatae quos facilis quae ab et
+								cum dolore? Quasi corrupti veritatis quia
+								incidunt! Dolor similique iste itaque quod
+								maiores mollitia vel voluptas, temporibus,
+								ratione provident aliquam maxime. Reprehenderit
+								dolores voluptates quasi deserunt omnis ut
+								exercitationem.
 							</p>
 						</div>
 					</div>
